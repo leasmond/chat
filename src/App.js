@@ -1,25 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import { useContext } from "react";
+import { Context } from "./store/store";
+import Contacts from "./copmonents/contacts";
+import Chat from "./copmonents/chat";
+import SignIn from "./copmonents/signIn";
+import "./App.css";
 
-function App() {
+const App = () => {
+  const [state] = useContext(Context);
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {state.currentAccount ? (
+        <>
+          <Contacts />
+          <Chat />
+        </>
+      ) : (
+        <SignIn />
+      )}
     </div>
   );
-}
+};
 
 export default App;

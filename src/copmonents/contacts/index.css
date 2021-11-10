@@ -1,0 +1,84 @@
+.contacts {
+  max-width: 400px;
+  height: 100vh;
+  min-height: 600px;
+  width: 100%;
+}
+
+.header__contacts {
+  display: flex;
+  align-items: center;
+  height: 70px;
+  background: #1a1e1e;
+  border-bottom: 1px solid #81818142;
+  padding: 0 50px;
+}
+
+.dialogs {
+  overflow-y: auto;
+  height: calc(100vh - 71px);
+  min-height: 529px;
+  background: #131c20;
+}
+
+.dialog {
+  display: flex;
+  cursor: pointer;
+}
+
+.dialog:hover {
+  background: #879792;
+}
+
+.dialog__active {
+  background: #2c9171;
+}
+
+.dialog__active:hover {
+  background: #2c9171;
+}
+
+.avatar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 60px;
+  min-width: 60px;
+  margin: 16px;
+  border-radius: 50%;
+  background: rgb(212, 154, 60);
+}
+
+.user {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 20px 16px 20px 0;
+  border-bottom: 1px solid #81818142;
+}
+
+.user__name__date {
+  display: flex;
+  margin-bottom: 8px;
+  justify-content: space-between;
+}
+
+.user__name__text {
+  margin: 0;
+  margin-bottom: 7px;
+  color: white;
+}
+
+.user__date__text {
+  margin: 0;
+  color: #c7c7c7;
+}
+
+.user__dialog__text {
+  margin: 0;
+  color: #c7c7c7;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 290px;
+}
